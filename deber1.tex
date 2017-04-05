@@ -1,0 +1,27 @@
+%documento de clase
+\documentclass[a5paper,doc,12pt,apacite]{apa}
+
+%paquetes
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nolayout,es-nodecimaldot,es-tabla]{babel}
+
+%comandos
+\title{epílogo}
+\author{Elisa Kiseljak}
+\affiliation{Tres historias europeas}
+\date{5 de abril de 2017}
+\pagenumbering{Roman}
+%\geometry{top=2.5cm, bottom=2cm, left=2cm, right=2cm}
+
+%contenido
+\begin{document}
+ \maketitle
+ \input{Texto}
+
+%informacion de bibliografia
+\nocite{Bosch}
+\bibliographystyle{apacite}
+\bibliography{Libro}
+
+\end{document}
