@@ -1,0 +1,49 @@
+%documento de clase
+\documentclass[a4paper,12pt]{article}
+%paquetes
+\usepackage[spanish]{babel}
+\usepackage[total={18cm, 21cm}, top=2cm, left=2cm]{geometry}
+\usepackage{amsmath, amssymb, amsfonts, latexsym}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{nicefrac}
+%comandos
+\parindent = 0mm
+
+\author{Alexis Villavicencio}
+
+\title{Escritura de texto matemático}
+
+\date{\today}
+
+%contenido
+\begin{document}
+\maketitle
+La optimización de funciones no es un tema analizado únicamente con herramientas del cálculo en
+una variable y de la programación lineal. Esta se puede generalizar a espacios más generales como
+son los espacios de Banach. A continuación se presenta el siguiente problema de optimización:
+\begin{align}
+  &min J(u,y,a)=\int_{0}^{a} \big(u^{'}(x)\big)^{2}\ dx \,+\,\int_{0}  ^{a} \dfrac{a^2}{med(0,a,a^2)} \ dx , \\
+\nonumber&sujeta \,a\nonumber 
+\end{align}
+
+\begin{align}
+ \begin{cases}
+-u^{"}(x)+\alpha(x)u(x)=y(x)\quad &en (0,a)\\
+u=0 \quad &en \{0,a\}\\
+\displaystyle \lim_{x \to a} y(x)=a,\\
+a\geq 4
+\end{cases}
+\end{align}
+La idea es optimizar sobre el conjunto de funciones de cada intervalo de la forma [0,a] y determinar
+el valor de 
+\(
+a\geq4 
+\)
+que indique el mejor intervalo de trabajo.
+
+
+
+\end{document}
