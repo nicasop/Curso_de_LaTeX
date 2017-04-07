@@ -1,0 +1,74 @@
+%documento de clae
+\documentclass[a4paper,12pt]{article}
+
+%paquetes
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla,es-nolayout,es-nodecimaldot]{babel}
+\usepackage[total={18cm, 21cm}, top=2cm, left=2cm]{geometry}
+\usepackage{amsmath, amssymb, amsfonts, latexsym}
+\usepackage{graphicx}
+\usepackage[x11names,table]{xcolor}
+\usepackage{multicol}
+\usepackage{nicefrac}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{url}
+
+%comandos
+\title{Escritura de Tablas}
+\author{Alexis Villavicencio}
+\date{\today}
+
+%contenido
+\begin{document}
+ \maketitle
+\begin{table}
+\label{tabla:03}
+\caption{Modelos de regresión ordinal}
+\begin{tabular}{lllllllll}
+\hline 
+\multicolumn{3}{l}{\multirow{2}{*}{Modelos}} & \multirow{2}{*}{E} &\multirow{2}{*}{EE} & \multirow{2}{*}{Wald}& \multirow{2}{*}{p} & 95 IC\\ \cline{8-9}
+& & & & & & & LI & LS \\ \hline
+\multirow{8}{*}{HNI-16}&\multirow{4}{*}{Variable predicha}&1& 1.34& 0.54& 6.24& .013& 0.29& 2.40\\
+&& 3& 2.61& 0.56& 21.80& < .001& 1.51& 3.70\\
+&& 5& 4.36& 0.58 &56.33& < .001& 3.22 &5.50\\
+&& 7& 7.08& 0.81& 77.17& < .001& 5.50& 8.66\\
+& \multirow{4}{*}{Variables predictoras}&[Rlg = Católica]& 0.64& 0.21& 8.96& .003& 0.22& 1.05\\
+&&[Rlg = Cristiana]& 1.99& 0.44& 20.19& < .001& 1.12& 2.86\\
+&&[AmHo = No]& 0.58& 0.18& 10.45& .001& 0.23& 0.94\\
+&&[OS = Hetero.]& 1.91& 0.53& 13.22& < .001& 0.88& 2.95\\
+\multirow{8}{*}{EXT}&\multirow{4}{*}{Variable predicha}& 1& -0.31& 0.22& 1.98& .159& -0.75& 0.12\\
+&&3& 0.93& 0.24& 15.39& < .001& 0.46& 1.39\\
+&&5& 2.37& 0.29& 68.60& < .001& 1.81& 2.93\\
+&&7& 3.82& 0.44& 77.10& < .001& 2.97& 4.68\\
+& \multirow{4}{*}{Variables predictoras}& [Rlg = Católica]& 0.38& 0.23& 2.74& .098& -0.07& 0.82\\
+&&[Rlg=Cristiana]& 0.98& 0.41& 5.67& .017& 0.17& 1.78\\
+&&[AmHo=No]& 0.63& 0.18& 11.79& .001& 0.27& 0.98\\
+&&[Sexo = Mujer]& -0.36& 0.16& 5.19& .023& -0.67& -0.05\\
+\multirow{7}{*}{INT}&\multirow{4}{*}{Variable predicha}& 1& 0.43& 0.62& 0.48& .490& -0.79& 1.65\\
+&&3& 2.38& 0.66& 12.88& < .001& 1.08& 3.68\\
+&&5& 4.01& 0.68& 34.57& < .001& 2.67& 5.35\\
+&&7& 5.61& 0.71& 62.65& < .001& 4.22& 7.00\\
+& \multirow{3}{*}{Variables predictoras}& [Rlg = Católica]& 0.58& 0.33& 3.20& .074& -0.06& 1.22\\
+&&[Rlg = Cristiana]& 2.51& 0.68& 13.66& < .001& 1.18& 3.83\\
+&&[OS = Hetero.]& 2.90& 0.64& 20.70& < .001& 1.65& 4.15\\
+\multirow{8}{*}{PROMI}&\multirow{4}{*}{Variable predicha}& 1& 0.79& 0.49& 2.62& .105& -0.17& 1.74\\
+&&3& 1.63& 0.50& 10.82& .001& 0.66& 2.60\\
+&&5& 2.99& 0.51& 34.55& < .001& 1.99& 3.99\\
+&&7& 4.96& 0.60& 69.49& < .001& 3.79& 6.12\\
+& \multirow{4}{*}{Variables predictoras}& [Rlg = Católica]& 0.52& 0.21& 6.23& .013& 0.11& 0.93\\
+&&[Rlg = Cristiana]& 1.04& 0.40& 6.82& .009& 0.26& 1.81\\
+&&[OS = Hetero.]& 1.52& 0.47& 10.41& .001& 0.60& 2.44\\
+&&[IVSA = No]& -0.39& 0.15& 6.37& .012& -0.68& -0.09\\ \hline
+\multicolumn{9}{p{17.8cm}}{Parámetros fijados a 0: [Religión (Rlg) = Otra], [Amigos homosexuales (AmHo) = Sí], [Orientación
+sexual (OS) = No heterosexual], [Sexo = Hombre] e [Inicio de la vida sexual activa de pareja (IVSA)
+= Sí]. HNI-16: puntuación total de la escala HNI-16, EXT: rechazo de la manifestación pública de la
+homosexualidad, INT: rechazo de los deseos, pensamientos e identidad homosexuales propios,
+PROMI: calificación de las personas homosexuales como promiscuas. Valores de las variables
+predichas: 1 “completamente en desacuerdo”, 3 “en desacuerdo”, 5 “indiferente”, 7 “de acuerdo” y
+9 “definitivamente de acuerdo” (categoría de referencia). Función de enlace: Log-log negativo,
+excepto Logit con INT}
+\end{tabular}
+\end{table}
+\end{document}
