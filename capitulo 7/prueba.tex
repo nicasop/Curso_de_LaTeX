@@ -1,0 +1,38 @@
+\documentclass[a4paper,12pt]{article}
+
+%paquetes
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla,es-nolayout,es-nodecimaldot]{babel}
+\usepackage[total={18cm, 21cm}, top=2cm, left=2cm]{geometry}
+\usepackage{amsmath, amssymb, amsfonts, latexsym}
+\usepackage{graphicx}
+\usepackage[x11names,table]{xcolor}
+\usepackage{multicol}
+\usepackage{nicefrac}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{lipsum}
+\usepackage{makeidx}
+%comandos
+\title{inserción de gráficos}
+\author{Alexis Villavicencio}
+\date{\today}
+
+%contenido
+\begin{document}
+\maketitle
+
+En su libro , Clarkson y Presmeg \cite[p45, figura 4.2]{9781441935113}
+\tableofcontents
+\section{LENGUAJE}
+\lipsum
+\subsection{Generacion de los Decapitados}
+\lipsum
+\subsubsection{Medardo Angel Silva}
+\lipsum
+\nocite{Evans , Goo_1971, JCR, Brezis , Alberty_1999}
+\bibliographystyle{apalike} % Opcional
+\bibliography{citas}
+\end{document}
