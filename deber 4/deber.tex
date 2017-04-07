@@ -1,0 +1,61 @@
+%documento de clase
+\documentclass[a4paper,12pt]{article}
+
+%paquetes
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla,es-nolayout,es-nodecimaldot]{babel}
+\usepackage[total={18cm, 21cm}, top=2cm, left=2cm]{geometry}
+\usepackage{amsmath, amssymb, amsfonts, latexsym}
+\usepackage{graphicx}
+\usepackage[x11names,table]{xcolor}
+\usepackage{multicol}
+\usepackage{listings}
+
+%comandos
+\title{Componer Latex con otros lenguajes de programación}
+\author{Alexis Villavicencio}
+\date{\today}
+
+%contenido
+\begin{document}
+\lstset
+{
+language = C++,
+breaklines = true,
+basicstyle = \tt\footnotesize ,
+keywordstyle = \color{purple},
+identifierstyle = \color{yellow},
+commentstyle = \color{red},
+showstringspaces = false ,
+ numbers = left,
+ numberstyle = \tiny\color{brown},
+ numbersep = 10pt,
+ frame = single ,
+ rulecolor = \color{teal!20},
+ tabsize = 3,
+ texcl = true,
+ }
+ \begin{lstlisting}
+
+#include <vector>
+#include <sstream>
+#include <string>
+#include <fstream>
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=0,b=0,c=0;
+    cout<<"ingrese un numero: ";cin>>a;
+    cout<<"ingrese otro numero: ";cin>>b;
+    while(a<=b)
+    {
+        if(a%2!=0)
+        c=c+1; a=a+1;       
+    }
+    cout<<c<<endl;
+    cin.ignore(); return 0;
+}
+\end{lstlisting}
+
+\end{document}
